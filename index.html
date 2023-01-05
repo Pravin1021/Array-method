@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY METHOD</title>
+</head>
+<body>
+    <li>pop</li>
+    <li>push</li>
+    <li>shift</li>
+    <li>unshift</li>
+    <li>splice</li>
+    <li>reduce</li>
+    <li>sort</li>
+    <li>foreach</li>
+    <li>find</li>
+    <li>join</li><br><br><br>
+
+    <script>
+        //pop
+        let a=["vel","pravin","rupu","rajith"]
+        a.pop() //pop from last
+        document.write(a + "</br>")
+
+        //push
+        let b=["vel","pravin","rupu","rajith"]
+        b.push("pandi") //pushing to last
+        document.write(b + "</br>")
+
+        //shift
+        let c=["vel","pravin","rupu","rajith"]
+        c.shift()//removes first value
+        document.write(c + "</br>")
+
+        //unshift
+        let d=["vel","pravin","rupu","rajith"]
+        d.unshift("ganesh") //adds to first
+        document.write(d + "</br>")
+
+        //splice
+        let e=["vel","pravin","rupu","rajith"]
+        e.splice(2,0,"gopi")// first position second how many value to delete third to add
+        document.write(e + "</br>")
+
+        //reduce
+        let f=[11,2]
+        let text=f.reduce(myFunc)
+        document.write(text + "</br>")
+        function myFunc(total,num){
+            return total-num
+        }
+
+        //sort
+        let g=["vel","pravin","rupu","rajith"]
+        g.sort() //alphabetical and ascending order
+        document.write(g + "</br>")
+
+        //foreach
+        let h=["vel","pravin","rupu","rajith"]
+        let i=""
+        h.forEach(eachFunc) //execute for each value in array
+        document.write(i + "</br>")
+        function eachFunc(value,index){
+          i+=index+value+"</br>"
+        }
+
+        //find
+        let j=[12,34,2,67]
+        let find=j.find(greater) //gives first big number only
+        document.write(find + "</br>")
+        function greater(j){
+           return j>18
+        }
+
+        //join
+        let k=["vel","pravin","rupu","rajith"]
+        let Vs=k.join("AND")
+        document.write(Vs)
+    </script>    
+</body>
+</html>
