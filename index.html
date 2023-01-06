@@ -7,7 +7,7 @@
     <title>ARRAY METHOD</title>
 </head>
 <body>
-    <li>pop</li>
+    <!-- <li>pop</li>
     <li>push</li>
     <li>shift</li>
     <li>unshift</li>
@@ -16,68 +16,148 @@
     <li>sort</li>
     <li>foreach</li>
     <li>find</li>
-    <li>join</li><br><br><br>
+    <li>join</li><br><br> -->
+
+    <li>concat</li>
+    <li>every</li>
+    <li>some</li>
+    <li>fill</li>
+    <li>indexof</li>
+    <li>map</li>
+    <li>reverse</li>
+    <li>slice</li>
+    <li>tostring</li>
+    <li>delete</li>
+    <br><br>
 
     <script>
-        //pop
-        let a=["vel","pravin","rupu","rajith"]
-        a.pop() //pop from last
-        document.write(a + "</br>")
+        // //pop
+        // let a=["vel","pravin","rupu","rajith"]
+        // a.pop() //pop from last
+        // document.write(a + "</br>")
 
-        //push
-        let b=["vel","pravin","rupu","rajith"]
-        b.push("pandi") //pushing to last
-        document.write(b + "</br>")
+        // //push
+        // let b=["vel","pravin","rupu","rajith"]
+        // console.log(b.push("pandi")) //pushing to last
+        // document.write(b + "</br>")
 
-        //shift
-        let c=["vel","pravin","rupu","rajith"]
-        c.shift()//removes first value
+        // //shift
+        // let c=["vel","pravin","rupu","rajith"]
+        // c.shift()//removes first value
+        // document.write(c + "</br>")
+
+        // //unshift
+        // let d=["vel","pravin","rupu","rajith"]
+        // d.unshift("ganesh") //adds to first
+        // document.write(d + "</br>")
+
+        // //splice
+        // let e=["vel","pravin","rupu","rajith"]
+        // e.splice(2,0,"gopi")// first position second how many value to delete third to add
+        // document.write(e + "</br>")
+
+        // //reduce
+        // let f=[11,2]
+        // let text=f.reduce(myFunc)
+        // document.write(text + "</br>")
+        // function myFunc(total,num){
+        //     return total-num
+        // }
+
+        // //sort
+        // let g=["vel","pravin","rupu","rajith"]
+        // g.sort() //alphabetical and ascending order
+        // document.write(g + "</br>")
+
+        // //foreach
+        // let h=["vel","pravin","rupu","rajith"]
+        // let i=""
+        // h.forEach(eachFunc) //execute for each value in array
+        // document.write(i + "</br>")
+        // function eachFunc(value,index){
+        //   i+=index+value+"</br>"
+        // }
+
+        // //find
+        // let j=[12,34,2,67]
+        // let find=j.find(greater) //gives first big number only
+        // document.write(find + "</br>")
+        // function greater(j){
+        //    return j>18
+        // }
+
+        // //join
+        // let k=["vel","pravin","rupu","rajith"]
+        // let Vs=k.join("AND")
+        // document.write(Vs)
+
+
+        //concat
+        let a=[1,2]
+        let b=[3,4]
+        let c=a.concat(b) //merge both array
         document.write(c + "</br>")
 
-        //unshift
-        let d=["vel","pravin","rupu","rajith"]
-        d.unshift("ganesh") //adds to first
-        document.write(d + "</br>")
-
-        //splice
-        let e=["vel","pravin","rupu","rajith"]
-        e.splice(2,0,"gopi")// first position second how many value to delete third to add
-        document.write(e + "</br>")
-
-        //reduce
-        let f=[11,2]
-        let text=f.reduce(myFunc)
-        document.write(text + "</br>")
-        function myFunc(total,num){
-            return total-num
+        //every
+        let d=[18,20,2,56]
+        let check=d.every(myFunc)
+        document.write(check + "</br>") //return in boolean
+        function myFunc(d){
+            return d>18
         }
 
-        //sort
-        let g=["vel","pravin","rupu","rajith"]
-        g.sort() //alphabetical and ascending order
-        document.write(g + "</br>")
-
-        //foreach
-        let h=["vel","pravin","rupu","rajith"]
-        let i=""
-        h.forEach(eachFunc) //execute for each value in array
-        document.write(i + "</br>")
-        function eachFunc(value,index){
-          i+=index+value+"</br>"
+        //some
+        let e=[18,20,2,56]
+        let check2=e.some(myFunc)
+        document.write(check2 + "</br>") //return in boolean
+        function myFunc(e){
+            return e>18
         }
 
-        //find
-        let j=[12,34,2,67]
-        let find=j.find(greater) //gives first big number only
-        document.write(find + "</br>")
-        function greater(j){
-           return j>18
+        //fill
+        let f=["rupu","vel","rupu","vel","rupu","vel"]
+        f.fill("pravin",-3) //change all value with new value
+        document.write(f + "</br>")
+        
+        //indexOf
+        let g=["rupu","vel","pravin","gopi","rupu","vel","pravin","gopi"]
+         //returns the index position
+        document.write(g.indexOf("pravin",3) + "</br>")
+
+        //map
+        let i=[1,2,3]
+        let j=i.map(myMap)
+        document.write(j + "</br>")
+        function myMap(num){
+            return num*2
         }
 
-        //join
-        let k=["vel","pravin","rupu","rajith"]
-        let Vs=k.join("AND")
-        document.write(Vs)
+        //reverse
+        let k=[1,2,3]
+        k.reverse()
+        document.write(k + "</br>")
+
+        //slice
+        let l=["rupu","vel","pravin","gopi"]
+        let m=l.slice(1,3) //1 index 3index
+        document.write(m + "</br>")
+
+        //tostring
+        let n=["rupu","vel","pravin","gopi"]
+        let o=n.toString()
+        document.write(o + "</br>")
+
+        //lastindexof
+        let p=["rupu","vel","rupu","pravin","gopi"]
+        let q=p.lastIndexOf("rupu",1)
+        document.write(q)
+
+
+
+
+      
+
+
     </script>    
 </body>
 </html>
