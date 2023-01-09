@@ -93,69 +93,84 @@
 
 
         //concat
-        let a=[1,2]
-        let b=[3,4]
-        let c=a.concat(b) //merge both array
-        document.write(c + "</br>")
+        // let a=[1,2]
+        // let b=[3,4]
+        // let c=a.concat(b) //merge both array
+        // document.write(c + "</br>")
 
-        //every
-        let d=[18,20,2,56]
-        let check=d.every(myFunc)
-        document.write(check + "</br>") //return in boolean
-        function myFunc(d){
-            return d>18
-        }
+        // //every
+        // let d=[18,20,2,56]
+        // let check=d.every(myFunc)
+        // document.write(check + "</br>") //return in boolean
+        // function myFunc(d){
+        //     return d>18
+        // }
 
-        //some
-        let e=[18,20,2,56]
-        let check2=e.some(myFunc)
-        document.write(check2 + "</br>") //return in boolean
-        function myFunc(e){
-            return e>18
-        }
+        // //some
+        // let e=[18,20,2,56]
+        // let check2=e.some(myFunc)
+        // document.write(check2 + "</br>") //return in boolean
+        // function myFunc(e){
+        //     return e>18
+        // }
 
-        //fill
-        let f=["rupu","vel","rupu","vel","rupu","vel"]
-        f.fill("pravin",-3) //change all value with new value
-        document.write(f + "</br>")
+        // //fill
+        // let f=["rupu","vel","rupu","vel","rupu","vel"]
+        // f.fill("pravin",-3) //change all value with new value
+        // document.write(f + "</br>")
         
-        //indexOf
-        let g=["rupu","vel","pravin","gopi","rupu","vel","pravin","gopi"]
-         //returns the index position
-        document.write(g.indexOf("pravin",3) + "</br>")
+        // //indexOf
+        // let g=["rupu","vel","pravin","gopi","rupu","vel","pravin","gopi"]
+        //  //returns the index position
+        // document.write(g.indexOf("pravin",3) + "</br>")
 
-        //map
-        let i=[1,2,3]
-        let j=i.map(myMap)
-        document.write(j + "</br>")
-        function myMap(num){
-            return num*2
+        // //map
+        // let i=[1,2,3]
+        // let j=i.map(myMap)
+        // document.write(j + "</br>")
+        // function myMap(num){
+        //     return num*2
+        // }
+
+        // //reverse
+        // let k=[1,2,3]
+        // k.reverse()
+        // document.write(k + "</br>")
+
+        // //slice
+        // let l=["rupu","vel","pravin","gopi"]
+        // let m=l.slice(1,3) //1 index 3index
+        // document.write(m + "</br>")
+
+        // //tostring
+        // let n=["rupu","vel","pravin","gopi"]
+        // let o=n.toString()
+        // document.write(o + "</br>")
+
+        // //lastindexof
+        // let p=["rupu","vel","rupu","pravin","gopi"]
+        // let q=p.lastIndexOf("rupu",1)
+        // document.write(q)
+
+
+        //includes
+        let a=["rupu","pravin","vel"]
+        let b=a.includes("pravin")
+        document.write(b)   
+        
+        //reduceright
+        let c=[1,2,3]
+        let d=c.reduceRight(myfunc)
+        function myfunc(a,b){
+            return a+b
         }
+        document.write(d);
 
-        //reverse
-        let k=[1,2,3]
-        k.reverse()
-        document.write(k + "</br>")
+        let e="hjvjhv"
+        let f=Array.from(e)
+        document.write(f)
 
-        //slice
-        let l=["rupu","vel","pravin","gopi"]
-        let m=l.slice(1,3) //1 index 3index
-        document.write(m + "</br>")
-
-        //tostring
-        let n=["rupu","vel","pravin","gopi"]
-        let o=n.toString()
-        document.write(o + "</br>")
-
-        //lastindexof
-        let p=["rupu","vel","rupu","pravin","gopi"]
-        let q=p.lastIndexOf("rupu",1)
-        document.write(q)
-
-
-
-
-      
+        
 
 
     </script>    
